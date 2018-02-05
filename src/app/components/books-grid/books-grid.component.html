@@ -1,0 +1,32 @@
+<div class="center">
+  <div class="half">
+    <mat-accordion>
+      <div *ngIf="books">
+        <!-- Loop all books -->
+        <div *ngFor="let bookId of books| keys; let i = index">
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <!-- Header -->
+              <mat-expansion-panel-header>
+                <mat-panel-title class="l-text">
+                  {{books[bookId].title}}
+                </mat-panel-title>
+                <mat-panel-description class="l-text">
+                    {{books[bookId].author}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <!-- Book content -->
+              <mat-list role="list">
+                <div *ngFor="let bookProperty of books[bookId]| keys : 'book'; let i = index">
+                  <mat-list-item role="listitem">
+                    <div class="title">{{bookStructure[bookProperty].name}}</div>:
+                    <div class="data">{{getContent(bookProperty, books[bookId][bookProperty])}}</div>
+                  </mat-list-item>
+                </div>
+                <button mat-raised-button (click)="deleteBook(bookId)">Delete Book</button>
+              </mat-list>    
+            </mat-expansion-panel>  
+        </div>
+      </div>
+    </mat-accordion>
+  </div>
+</div>

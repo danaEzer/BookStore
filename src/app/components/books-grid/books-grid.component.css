@@ -1,0 +1,33 @@
+.half {
+    width: 50% !important;
+}
+.center {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.mat-expansion-panel-header-description, .mat-expansion-panel-header-title{
+    width: 5%;
+}
+.title {
+    font-size: 0.9em;
+    font-family: Verdana,sans-serif;
+
+}
+.data {
+    color: #949b9e;
+    font-size: 0.9em;
+    padding-left: 5px;
+    font-family: Verdana,sans-serif;
+
+    display: flex;
+    flex-direction: row;
+}
+.l-text {
+    font-family: Verdana,sans-serif;
+}
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+    margin-right: 10px;
+}

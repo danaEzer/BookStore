@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.mat-card {
+    color: white;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #008ba2;
+}
+
+.mat-expanded .mat-expansion-panel-content {
+    border-top: 2px solid #62efff !important;
+}
+.mat-tab-label {
+    font-family: Verdana,sans-serif;
+}
+
+.mat-tab-group.mat-primary.mat-focused {
+    border-color: #008ba2 !important;
+}
+.mat-form-field-ripple {
+    background-color: #008ba2;
+}
+.mat-focused .mat-form-field-label {
+    color: #008ba2;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+    color: #008ba2 !important;
+}

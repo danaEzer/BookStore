@@ -1,0 +1,39 @@
+<div class="add-book-form-wrapper">
+  <div class="add-book-form">
+      <!-- Title -->
+      <mat-form-field>
+        <input matInput placeholder="Title" [(ngModel)]="newBook.title">
+      </mat-form-field>
+      <!-- Author -->
+      <mat-form-field>
+          <input matInput placeholder="Author" [(ngModel)]="newBook.author">
+      </mat-form-field>
+      <!-- Description -->
+      <mat-form-field>
+        <textarea matInput placeholder="Description" [(ngModel)]="newBook.description"></textarea>
+      </mat-form-field>
+      <!-- genre -->
+      <!-- <mat-form-field>
+          <input matInput placeholder="Genre" [(ngModel)]="presentationGenre">
+      </mat-form-field> -->
+      <mat-form-field>
+          <mat-select placeholder="Genre"  [(ngModel)]="presentationGenre">
+            <!-- <div > -->
+            <mat-option *ngFor="let option of genreOptions" [value]="option">
+              {{option}}
+            </mat-option>
+            <!-- </div> -->
+          </mat-select>
+        </mat-form-field>
+      <!-- ISBN  -->
+      <mat-form-field>
+          <input matInput placeholder="ISBN" [(ngModel)]="newBook.ISBN">
+      </mat-form-field>
+      <!-- Price -->
+      <mat-form-field>
+          <input matInput placeholder="Price ($)" [(ngModel)]="newBook.price">
+      </mat-form-field>
+      <p class="error-msg">{{errorMsg}}</p>
+      <button mat-button mat-raised-button (click)="addBook()" >Add</button>
+  </div>
+</div>
