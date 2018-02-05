@@ -25,6 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatListModule,
     MatButtonModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [ApiService, StoreActionService, ValidationService],
   bootstrap: [AppComponent]

@@ -19,7 +19,7 @@
                 <div *ngFor="let bookProperty of books[bookId]| keys : 'book'; let i = index">
                   <mat-list-item role="listitem">
                     <div class="title">{{bookStructure[bookProperty].name}}</div>:
-                    <div class="data">{{getContent(bookProperty, books[bookId][bookProperty])}}</div>
+                    <div class="data max-height">{{getContent(bookProperty, books[bookId][bookProperty])}}</div>
                   </mat-list-item>
                 </div>
                 <button mat-raised-button (click)="deleteBook(bookId)">Delete Book</button>

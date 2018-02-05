@@ -20,7 +20,6 @@ export class BooksGridComponent implements OnInit {
 
   ngOnInit() {
     this.storeAction.selectBooks().subscribe(books => {
-      console.log('new books', books);
       this.books = books;
       this.panelOpenState = false;
     });

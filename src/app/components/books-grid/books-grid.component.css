@@ -31,3 +31,7 @@
 .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
     margin-right: 10px;
 }
+.max-height {
+    max-height: 45px;
+    overflow-y: auto;
+}

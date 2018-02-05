@@ -19,6 +19,7 @@ export class BookAddComponent implements OnInit {
   ngOnInit() {
   }
   addBook() {
+    console.log(this.newBook)
     this.newBook.genre = this.presentationGenre;
     this.newBook.price = Number(this.newBook.price);
     if(this.validationService.validateBook(this.newBook)){

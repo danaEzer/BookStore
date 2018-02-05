@@ -20,7 +20,7 @@ export class Book{
     title;
     description;
     author;
-    publicationDate = Date.now();
+    publicationDate;
     genre;
     ISBN;
     price;

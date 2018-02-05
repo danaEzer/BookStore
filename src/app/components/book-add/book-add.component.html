@@ -13,9 +13,6 @@
         <textarea matInput placeholder="Description" [(ngModel)]="newBook.description"></textarea>
       </mat-form-field>
       <!-- genre -->
-      <!-- <mat-form-field>
-          <input matInput placeholder="Genre" [(ngModel)]="presentationGenre">
-      </mat-form-field> -->
       <mat-form-field>
           <mat-select placeholder="Genre"  [(ngModel)]="presentationGenre">
             <!-- <div > -->
@@ -33,6 +30,15 @@
       <mat-form-field>
           <input matInput placeholder="Price ($)" [(ngModel)]="newBook.price">
       </mat-form-field>
+      <!-- Date -->
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="newBook.publicationDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- <mat-form-field>
+        <input matInput placeholder="Date" [(ngModel)]="newBook.publicationDate">
+    </mat-form-field> -->
       <p class="error-msg">{{errorMsg}}</p>
       <button mat-button mat-raised-button (click)="addBook()" >Add</button>
   </div>
